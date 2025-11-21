@@ -70,11 +70,11 @@ tl.to("#arrow2", {duration: 0.5, y:0});
 }
 });
 
-gsap.set('.panel1', {scale:0})
-gsap.to('.panel1', {
+
+gsap.to('.cont', {
 	 duration:5,
    scale:1,
-	x: '-100vw',
+	x: '-100vw',ease:"none",
   scrollTrigger:{
     trigger:"#page1",scrub:true,start:"top top ",ent:'top bottom',pin:true
   },
