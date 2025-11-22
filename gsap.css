@@ -300,7 +300,7 @@ p {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -324,7 +324,7 @@ p {
   width: 30%;
   height: 100%;
   perspective: 1000px;
-  cursor: pointer;
+ 
 }
 
 .card-inner {
@@ -381,6 +381,10 @@ p {
   background-color: #02020273;
   padding: 3px;
   border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .card-front5 {
   background: url(currency\ converter.jpg) center center;
@@ -394,7 +398,14 @@ p {
 .card-back {
   background: #1e293b7a;
   color: white;
-  padding: 0px;
+  padding: 4px;
   transform: rotateY(180deg);
   text-align: center;
+  
 }
+#projects {
+  color: #c9ccce;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
