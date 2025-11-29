@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#body {
+  height: 100vh;
+  background: linear-gradient(black 50%, rgb(51, 51, 51));
+  background-repeat: no-repeat;
+}
+#body2 {
+  height: 100vh;
+  background: linear-gradient(rgb(51, 51, 51) 50%, black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+#container {
+  background-color: rgba(2, 2, 2, 0.151);
+  padding: 20px;
+  border-radius: 20px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ align-items: center;
+ font-family: 'Times New Roman', Times, serif;
+ margin-top: 150px;
+ box-shadow: rgba(82, 81, 81, 0.74) 0px 10px 50px 0.5px;
+ 
+}
+.container {
+  background-color: rgba(238, 235, 230, 0.315);
+  padding: 20px;
+  border-radius: 20px;
+  align-items: center;
+  animation: containershow 1s ease forwards;
+}
+#h3{color: rgb(214, 214, 214);}
+
+@keyframes containershow {
+  from {
+    opacity: 0;
+    transform: translatey(0) scale(0);
+  }
+  to {
+    opacity: 1;
+
+    transform: translatey(0) scale(1);
+  }
+}
+
+input {
+  height: 35px;
+  border-radius: 10px;
+  border-style: none;
+  padding: 3px 10px;
+  background-color: rgb(133, 133, 133);
+  color: antiquewhite;
+}
+input:focus{outline: none;}
+
+
+input::placeholder{color: #faebd79c;}
+button {
+  border-radius: 10px;
+  height: 45px;
+  width: 150px;
+  border-style: none;
+  background-color: rgba(45, 46, 46, 0.438);
+  color: rgb(241, 240, 238);
+  transition: .5s;
+}
+button:hover{
+    color: rgb(66, 66, 66);
+    background-color: antiquewhite;
+}
+#carousel {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(60, 60, 61, 0);
+  bottom: 30px;
+}
+.di {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(56, 53, 58, 0.295);
+  border-radius: 20px;
+  width: 300px;
+  height: 100px;
+  margin: 0 10px;
+  color: rgba(240, 248, 255, 0.733);
+}
+#evr {
+  display: flex;
+
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+#carousel1 {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(60, 60, 61, 0);
+  bottom:-150px;
+}
+.di1 {
+    
+  flex: 0 0 auto;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(37, 35, 37, 0.295);
+  border-radius: 20px;
+  width: 300px;
+  height: 100px;
+  margin: 0 10px;
+  color: rgba(240, 248, 255, 0.733);
+  
+  direction: ltr;
+}
+#di{
+    position: absolute;
+    height: 100px;
+    z-index: 5;
+    box-shadow:rgb(94, 93, 93) 0 0 50px 50px;
+}
+#di1{
+    
+    position: absolute;
+    height: 100px;
+    right: 0;
+    z-index: 5;
+    box-shadow:rgb(95, 94, 94) 0 0 50px 50px;
+}
+#evr1 {
+  display: flex;
+  width: max-content;
+  animation: scroll1 10s linear infinite;
+}
+@keyframes scroll1 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+#nav nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(68, 63, 56);
+  gap: 10px;
+}
+#nav nav h1 {
+  color: aliceblue;
+  font-family: "Times New Roman", Times, serif;
+}
+#nav nav h3 {
+  font-family: "Sansation", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  color: rgb(17, 18, 19);
+  padding-top: 10px;
+}
+#explain {
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  top: 80px;
+  margin-left: 50px;
+  width: 900px;
+}
+#lin {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  height: fit-content;
+
+  display: flex;
+}
+#lin h1 {
+  color: rgba(255, 255, 255, 0.89);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 180px;
+}
+#lin h2 {
+  color: rgba(240, 255, 255, 0.452);
+  height: 50px;
+  margin-left: 10px;
+  padding-top: 135px;
+}
+#explain p {
+  position: absolute;
+  top: 180px;
+  
+  padding: 10px;
+  color: antiquewhite;
+  background-color:rgba(70, 68, 68, 0.13);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+}
+#navend{
+    height: 80px;
+    width: 100%;
+    background:linear-gradient(60deg,black,rgb(110, 109, 109),black);
+    font-family:'Times New Roman', Times, serif;
+    color:rgba(255, 255, 255, 0.733) ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#navend div{
+
+    display: flex;
+    flex-direction: column;
+}
+#navend img{
+    
+   padding-left: 10px ;
+}

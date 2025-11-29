@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <title></title>
+</head>
+<body>
+    <div id="evrything">
+        <div id="container"><div id="time">time</div><div id="timeday"></div>
+          <div id="searcharea">
+            <input  id="search" type="text"  placeholder=" Where do you want the weather ?" ><img onclick="Fsearch()" id="iconsearch" src="/img/search.png" alt="">
+            </div>
+            <div style="width: 100%; display: flex; justify-content: center;">
+               <div id="anim" style="height: 500px; padding: 0;"> <h2>You need to enter a city or country first !!</h2></div>
+            </div>
+   
+            <div  id="Forecast" class="hide">
+               
+          
+               <div id="locationparagraph"><img id="locationicone" src="/img/location.png" alt=""><h4 id="city"></h4></div>
+
+               <img id="iconeforecast" src="" alt="">
+              
+               <h1 id="deg"> <p>°C</p></h1>
+                <p id="descprition" ></p>
+             <div id="infowether">
+              <table>
+                 <tr id="tr">
+                    <th>humidity</th>
+                    <th>wind</th>
+                    <th>precipitation</th>
+                 </tr>
+                 <tr>
+                    <td><img src="/img/humidity.png" alt=""></td>
+                    <td><img src="/img/wind.png" alt=""></td>
+                    <td><img src="/img/water-drops.png" alt=""></td>
+                 </tr>
+                 <tr>
+                    <td><p id="humidity"></p> %</td>
+                    <td><p id="wind"></p> km/h</td>
+                    <td><p id="precipitation"></p> mm</td>
+                 </tr>
+              </table>
+               
+             </div>
+             
+            </div>
+    
+
+             <div id="days">
+               
+             </div>
+
+
+        </div>
+
+    </div>
+    
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+  <script>
+    var animation = lottie.loadAnimation({
+      container: document.getElementById('anim'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'wethers_icone/Weather.json'
+    });
+  </script>
+<script src="weather.js"></script>
+</html>

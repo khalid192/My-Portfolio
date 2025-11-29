@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Apple calculator</title>
+</head>
+<body>
+    <div id="evry">
+        <div id="calculator">
+        <div id="anim" style="position: absolute; width: 650px ; left: 0; z-index: -1; bottom: 0;"></div>
+        
+                <output id="out">0</output>
+            
+            
+            <div id="btn">
+                <button onclick="calcu(this)" id="nAC" class="br">AC</button>
+                <button onclick="calcu(this)" id="n+/-" class="br">+/-</button>
+                <button onclick="calcu(this)" id="n%" class="br">%</button>
+                <button onclick="calcu(this)" id="n/" class="bt">/</button>
+                <button onclick="calcu(this)" id="n7" class="NU">7</button>
+                <button onclick="calcu(this)" id="n8" class="NU">8</button>
+                <button onclick="calcu(this)" id="n9" class="NU">9</button>
+                <button onclick="calcu(this)" id="nX" class="bt">x</button>
+                <button onclick="calcu(this)" id="n4" class="NU">4</button>
+                <button onclick="calcu(this)" id="n5" class="NU">5</button>
+                <button onclick="calcu(this)" id="n6" class="NU">6</button>
+                <button onclick="calcu(this)" id="n-" class="bt">-</button>
+                <button onclick="calcu(this)" id="n1" class="NU">1</button>
+                <button onclick="calcu(this)" id="n2" class="NU">2</button>
+                <button onclick="calcu(this)" id="n3" class="NU">3</button>
+                <button onclick="calcu(this)" id="n+" class="bt">+</button>
+                <button onclick="calcu(this)" id="n0" class="NU">0</button>
+                <button onclick="calcu(this)" id="n," class="NU">,</button>
+                <button onclick="calcu(this)" id="n=" class="bt">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+<script>
+  var animation = lottie.loadAnimation({
+    container: document.getElementById('anim'), // فين غادي يتحط الأنيميشن
+    renderer: 'svg', // طريقة العرض
+    loop: true, // واش يدور بزاف المرات
+    autoplay: true, // يبدأ بوحدو
+    path: 'STUDENT.json' // مسار ملف Lottie JSON ديالك
+  });
+
+</script>
+<script src="scrept.js"></script>
+</html>

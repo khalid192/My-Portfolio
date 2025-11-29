@@ -1,0 +1,246 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-image: url(/img/alberta-2297204.jpg);
+    background-size: cover;
+}
+#evrything{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    width:50%;
+    height: 85%;
+    background-color: rgba(66, 105, 54, 0.13);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+}
+#searcharea{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+#search{
+height: 45px;
+width:80% ;
+margin-top: 20px;
+border-radius: 10px;
+background-color: rgba(0, 0, 0, 0.205);
+border-style: none;
+padding: 0 10px;
+color: aliceblue;
+font-size: 15px;
+transition: .6s;
+}
+#search::placeholder{
+color: rgba(250, 235, 215, 0.795);
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 12px;
+
+}
+
+#search:focus{
+    outline-style: none;
+    width:85% ;
+    
+}
+#iconsearch{
+   position: absolute;
+      height: 35px;
+    border-radius:50%;
+    right:12%;
+    top: 45px;
+    cursor: pointer;
+    transition: .1s;
+
+}
+#iconsearch:active{
+  
+      height: 40px;
+   
+}
+#iconeforecast{
+ width: 25%;
+ height: 25%;
+ 
+margin: 70px;
+margin-top: 40px;
+
+}
+
+
+
+#Forecast{
+    display:flex;
+    justify-content: space-between;
+    width: 1fr;
+    height: fit-content;
+
+}
+.hide{
+display: none !important;
+}
+#infowether{
+    background: rgba(65, 64, 64, 0);
+    width: 40%;
+    height: 160px;
+    font-size: 15px;
+    margin-right: 60px;
+    margin-top: 70px;
+    border-radius: 30px 10px;
+     display: flex;
+     justify-content: center;
+    
+    color: #ffffffbd;
+    box-shadow: rgba(156, 151, 151, 0) 5px 10px 15px 1px;
+}
+
+#deg{
+    display: flex;
+    color: rgba(240, 248, 255, 0.781);
+    position: absolute;
+    top:60%;
+    left: 85px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold;
+}
+#locationparagraph{
+    position: absolute;
+    left: 60px;
+    top: 90px;;
+    width: 300px;
+    display:flex ;
+color: rgba(240, 248, 255, 0.753);
+}
+#locationparagraph h4{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 5px;
+    font-weight: bolder;
+    font-size: smaller;
+   
+   
+}
+#locationicone{
+    width: 25px;
+    height: 25px;
+    
+}
+table{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+   align-items: center;
+   font-size: 100%;
+    
+
+    
+}table img{
+    width: 25px;
+   
+}
+table td ,th{
+    text-align: center;
+    
+  
+}
+th{
+ padding-top: 5px;
+ 
+    
+  
+}
+#descprition{
+    display: flex;
+    color: rgba(200, 203, 206, 0.582);
+    position: absolute;
+    top:70%;
+    left: 90px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:400;
+    font-size: large;
+}
+#anim{
+   position: absolute;
+   top: 0px;
+   z-index: -1;
+
+}
+#anim h2{
+text-align: center;
+color: rgba(223, 237, 243, 0.795);
+position:absolute;
+top: 100px;
+left: 30px;
+font-size: 20px;
+font-family:'Times New Roman', Times, serif;
+}
+#days{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 24%px;
+    background-color: rgba(127, 255, 212, 0);
+    justify-content: space-around;
+}
+#days div{
+    display: block;
+    justify-items: center;
+    height: 100%;
+    width: 50px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.548);
+    
+    color: rgb(81, 117, 148);
+    padding: 1fr 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: .2s;
+}
+#days div:hover{
+ background-color: rgb(255, 255, 255);
+ width: 55px;
+ color: black;
+}
+#days div h4{
+background-color: rgba(28, 158, 209, 0.247);
+padding:8%;
+width: 50px;
+font-size: 20px;
+}
+#days div img{
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    margin-top: 10px;
+   
+}
+#days div p{
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+
+#time{
+    position: absolute;
+    color: rgba(255, 250, 250, 0.747);
+    left: 70px;
+    top: 15px;
+    font-size: 14px;
+}
+#timeday{  position: absolute;
+    color: rgba(255, 250, 250, 0.747);
+    right: 70px;
+    top: 15px;
+font-size: 14px;}

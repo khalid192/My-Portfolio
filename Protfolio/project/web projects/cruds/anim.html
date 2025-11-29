@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khalidjs</title>
+    <link rel="stylesheet" href="anim.css">
+    
+</head>
+<body>
+ <div id="crud">
+    <div class="head">
+        <h2>cruds</h2>
+        <p>PRODUCT MANAGEMENT SYSTEM</p>       
+    </div>
+
+
+
+
+
+    <div class="inputs" id="inpstyle">
+     <input placeholder="title" type="text" name="" id="title">
+     <input oninput="getTotal()" placeholder="price" type="number" name="" id="price">
+     <input oninput="getTotal()" placeholder="taxes" type="number" name="" id="taxes">
+     <input oninput="getTotal()" placeholder="ads" type="number" name="" id="ads">
+     <input oninput="getTotal()" placeholder="discount" type="number" name="" id="discount">
+     
+     <small id="total"> </small>
+     <input placeholder="count" type="number" name="" id="count">
+     <input placeholder="category" type="text" name="" id="category">
+    
+    <button id="btncreate">Create</button>
+</div>
+
+
+
+    <div class="outputs">
+        <div class="inputs" >
+            <input onkeyup="searchdata(this.value.toLowerCase())" id="search" type="text" placeholder="search">
+
+
+            <div id="btnblock">
+            <button class="btnserch" onclick="serchbtnmood(this.id)" id="btnsearchtitle">Search By Title</button>
+            <button class="btnserch"  onclick="serchbtnmood(this.id)" id="btnsearchcategory" >Search By Category</button>
+            </div>
+            <div id='divdeletAll'>
+
+            </div>
+
+            <table>
+                <tr >
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Discount</th>
+                    <th>Category</th>
+                    <th>total</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="tbody">
+                   
+                </tbody>
+
+              
+            </table>
+
+        </div>
+    </div>
+
+
+
+ </div>
+
+    <script src="anim.js"></script>
+</body> 
+</html>
