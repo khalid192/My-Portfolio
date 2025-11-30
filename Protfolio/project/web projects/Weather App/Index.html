@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="style.css">
     <title></title>
 </head>
 <body>
     <div id="evrything">
         <div id="container"><div id="time">time</div><div id="timeday"></div>
           <div id="searcharea">
-            <input  id="search" type="text"  placeholder=" Where do you want the weather ?" ><img onclick="Fsearch()" id="iconsearch" src="/img/search.png" alt="">
+            <input  id="search" type="text"  placeholder=" Where do you want the weather ?" ><img onclick="Fsearch()" id="iconsearch" src="img/search.png" alt="">
             </div>
             <div style="width: 100%; display: flex; justify-content: center;">
                <div id="anim" style="height: 500px; padding: 0;"> <h2>You need to enter a city or country first !!</h2></div>
@@ -19,7 +19,7 @@
             <div  id="Forecast" class="hide">
                
           
-               <div id="locationparagraph"><img id="locationicone" src="/img/location.png" alt=""><h4 id="city"></h4></div>
+               <div id="locationparagraph"><img id="locationicone" src="img/location.png" alt=""><h4 id="city"></h4></div>
 
                <img id="iconeforecast" src="" alt="">
               
@@ -33,9 +33,9 @@
                     <th>precipitation</th>
                  </tr>
                  <tr>
-                    <td><img src="/img/humidity.png" alt=""></td>
-                    <td><img src="/img/wind.png" alt=""></td>
-                    <td><img src="/img/water-drops.png" alt=""></td>
+                    <td><img src="img/humidity.png" alt=""></td>
+                    <td><img src="img/wind.png" alt=""></td>
+                    <td><img src="img/water-drops.png" alt=""></td>
                  </tr>
                  <tr>
                     <td><p id="humidity"></p> %</td>
@@ -71,5 +71,5 @@
       path: 'wethers_icone/Weather.json'
     });
   </script>
-<script src="weather.js"></script>
+<script src="script.js"></script>
 </html>
