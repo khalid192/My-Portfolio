@@ -82,7 +82,7 @@ document.getElementById("iconeMenu").addEventListener("click", () => {
 
  let split = SplitText.create("#text1", { type: "words, chars" });
 const tl = gsap.timeline()
- tl.from("#KRZ", {duration:3,opacity:0,delay:1,y:50,scale:2,transformOrigin: "center center",});
+ tl.from("#KRZ", {duration:3,delay:1,y:50,scale:2,transformOrigin: "center center",});
  
  tl.from("#copieRight", {duration:2,opacity:0,y:20,ease:"elastic"});
  tl.from("#myProtfolio", {duration:1,opacity:0,});
