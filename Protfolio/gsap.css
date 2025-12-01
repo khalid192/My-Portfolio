@@ -78,6 +78,7 @@ width: 100vw;
   border-radius: 20px;
  
 }
+
 #text1 {
   left: 1.5vw;
   top: 60vh;
@@ -93,7 +94,7 @@ width: 100vw;
   position: absolute;
   overflow: hidden;
  right: -15vw;
-  
+  display: none;
 
 }
 #scrollDown {
@@ -536,9 +537,7 @@ a {
   cursor: pointer;
   z-index: 1000;
 }
-body{
- overflow-y: hidden;
-}
+
 #iconeMenu{
   scale: 1.5;
   position: fixed;

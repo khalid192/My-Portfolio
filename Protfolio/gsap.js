@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     smooth: 1.5,
     effects: true,ease: "power1.out",
   });
-
   
 
 const smoother = ScrollSmoother.get(); // already created
