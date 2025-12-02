@@ -587,6 +587,10 @@ a {
 }
 
 @media (max-width: 768px) {
+
+  body, html {
+    overflow-x: hidden;
+  }
   #HOME{
     height: 100dvh;
     width: 100dvw;
@@ -597,12 +601,13 @@ a {
   }
   #text1 {
     font-size: 6vw;
-    top: 65vh;
+    top: 60vh;
     left: 3vw;
     width: 80vw;
   }
  .nav{
-    width: 80%;
+ margin-top: 10px;
+    width: 90%;
   }
  #scrollDown {
     top: 65vh;
@@ -613,8 +618,6 @@ a {
   }
  #scrollBtn1, #scrollBtn{
  right: 4dvw;
- z-index: 8000;
-  }
-
-
+ z-index: 1000;
+  }  
 }
