@@ -592,7 +592,7 @@ a {
     overflow-x: hidden;
   }
   #HOME{
-    height: 100dvh;
+    height: calc(var(--vh) * 100);
     width: 100vw;
     
   }
@@ -622,6 +622,9 @@ a {
  z-index: 1000;
   }  
 }
+
+
+
 ::-webkit-scrollbar {
   display: none;
 }

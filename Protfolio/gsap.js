@@ -270,3 +270,7 @@ window.onbeforeunload = function () {
 };
 console.log(window.innerWidth,
 window.innerHeight);
+
+
+const vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
