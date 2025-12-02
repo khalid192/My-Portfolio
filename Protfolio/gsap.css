@@ -585,3 +585,27 @@ a {
   height: 100vh;
  
 }
+
+@media (max-width: 768px) {
+  #contNav li {
+    font-size: 2vh;
+  }
+  #text1 {
+    font-size: 6vw;
+    top: 65vh;
+    left: 3vw;
+    width: 80vw;
+  }
+ .nav{
+    width: 80%;
+  }
+ #scrollDown {
+    top: 70vh;
+  }
+  #svgscroll {
+    width: 20vw;
+    height: 50vw;
+  }
+
+
+}
