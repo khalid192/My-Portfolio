@@ -618,8 +618,7 @@ a {
   }
   .KRZ{
 
-  pointer-events: none;
-touch-action: none;
+overflow: hidden;
   }
  #scrollBtn1, #scrollBtn{
  right: 4dvw;
