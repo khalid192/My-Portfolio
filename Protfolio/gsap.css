@@ -616,6 +616,11 @@ a {
     width: 20vw;
     height: 50vw;
   }
+  .KRZ{
+
+  pointer-events: none;
+touch-action: none;
+  }
  #scrollBtn1, #scrollBtn{
  right: 4dvw;
  z-index: 1000;
