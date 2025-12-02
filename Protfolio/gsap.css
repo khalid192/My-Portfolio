@@ -587,6 +587,11 @@ a {
 }
 
 @media (max-width: 768px) {
+  #HOME{
+    height: 100dvh;
+    width: 100dvw;
+    overflow-x: hidden;
+  }
   #contNav li {
     font-size: 2vh;
   }
@@ -600,11 +605,15 @@ a {
     width: 80%;
   }
  #scrollDown {
-    top: 70vh;
+    top: 65vh;
   }
   #svgscroll {
     width: 20vw;
     height: 50vw;
+  }
+ #scrollBtn1, #scrollBtn{
+ right: 4dvw;
+ z-index: 8000;
   }
 
 
