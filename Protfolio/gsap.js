@@ -2,49 +2,69 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(
     ScrollTrigger,
     ScrollSmoother,
+    ScrollToPlugin,
     Physics2DPlugin,
     PhysicsPropsPlugin,DrawSVGPlugin,SplitText
   );
+  if(window.matchMedia("(min-width: 768px)").matches){
   ScrollSmoother.create({
     wrapper: ".ScrollSmoother-warapper",
     content: ".wrapper",
     smooth: 1.5,
     effects: true,ease: "power1.out",
-  });
+  });}
   
 
 const smoother = ScrollSmoother.get(); // already created
 
-
+gsap.registerPlugin(ScrollToPlugin);
 document.querySelector('ul[scroll-home]').addEventListener("click", () => {
-  smoother.scrollTo("#HOME", true);
-  gsap.to("#contNav", {duration:1.7, top:"-100px",});
-  gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
+gsap.to(window, {
+  duration: 0.7,
+  scrollTo: "#HOME",
+  ease: "power2.out"
+});
   
 });
 
 document.querySelector('ul[scroll-about]').addEventListener("click", () => {
-  smoother.scrollTo("#ABOUT", true);
+ gsap.to(window, {
+  duration: 0.7,
+  scrollTo: "#ABOUT",
+  ease: "power2.out"
+});
   gsap.to("#contNav", {duration:1.7, top:"-100px",});
   gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
   
 });
 
 document.querySelector('ul[scroll-skills]').addEventListener("click", () => {
-  smoother.scrollTo("#SKILLS", true);
+ gsap.to(window, {
+  duration: 0.7,
+  scrollTo: "#SKILLS",
+  ease: "power2.out"
+});
   gsap.to("#contNav", {duration:1.7, top:"-100px",});
   gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
   
 });
 
 document.querySelector('ul[scroll-project]').addEventListener("click", () => {
-  smoother.scrollTo("#PROJECT", true);
+ gsap.to(window, {
+  duration: 0.7,
+  scrollTo: "#PROJECT",
+  ease: "power2.out"
+});
   gsap.to("#contNav", {duration:1.7, top:"-100px",});
   gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
 });
 
 document.querySelector('ul[scroll-contact]').addEventListener("click", () => {
-  smoother.scrollTo("#CONTACT", true);
+ gsap.to(window, {
+  duration: 0.7,
+  scrollTo: "#CONTACT",
+  ease: "power2.out"
+});
   gsap.to("#contNav", {duration:1.7, top:"-100px",});
   gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
 });
