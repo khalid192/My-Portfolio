@@ -586,7 +586,9 @@ a {
   height: 100vh;
  
 }
-
+.photos1{
+  display: none;
+}
 @media (max-width: 768px) {
 
   body, html {
@@ -643,7 +645,7 @@ a {
   align-items: center;
 }
 #svgAbout{
-  width: 40vw;
+  width: 170px;
   padding-top: 20px;
 
 }
@@ -651,6 +653,11 @@ a {
   position:static;
   padding: 5px;
   margin: 0;
+}
+#abaout{
+  position: relative;
+  top: 100px;
+  
 }
 .photos1{
   display: block;
@@ -669,9 +676,7 @@ a {
 }
 
 
-.myPhtos1{
-  display: none;
-}
+
 
 ::-webkit-scrollbar {
   display: none;
