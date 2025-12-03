@@ -654,9 +654,10 @@ a {
   padding: 5px;
   margin: 0;
 }
-#abaout{
+#about{
   position: relative;
-  top: 100px;
+  top: 0;
+  left: 0;
   
 }
 .photos1{
