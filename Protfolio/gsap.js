@@ -7,15 +7,30 @@ document.addEventListener("DOMContentLoaded", () => {
     PhysicsPropsPlugin,DrawSVGPlugin,SplitText
   );
   if(window.matchMedia("(min-width: 768px)").matches){
+    // ScrollSmoother for smooth scrolling effect on desktop only
   ScrollSmoother.create({
     wrapper: ".ScrollSmoother-warapper",
     content: ".wrapper",
     smooth: 1.5,
     effects: true,ease: "power1.out",
-  });}
+  });
+
+  // Horizontal scroll section
+
+  gsap.to('.cont', {
+	 duration:5,
+   scale:1,
+	x: '-100vw',ease:"none",
+  scrollTrigger:{
+    trigger:"#ABOUT",scrub:true,start:"top top ",end:'bottom ',pin:true,
+  },
+ 
+});
+
+}
   
 
-const smoother = ScrollSmoother.get(); // already created
+const smoother = ScrollSmoother.get();
 
 gsap.registerPlugin(ScrollToPlugin);
 document.querySelector('ul[scroll-home]').addEventListener("click", () => {
@@ -96,7 +111,7 @@ document.getElementById("iconeMenu").addEventListener("click", () => {
   
   gsap.to("#contNav", {duration:1, top:"0",});
 
-  smoother.scrollTo(targetPos, true); // true = smooth
+  smoother.scrollTo(targetPos, true); 
 });
 
 
@@ -162,15 +177,7 @@ tl.to("#arrow2", {duration: 0.5, y:0});
 });
 
 
-gsap.to('.cont', {
-	 duration:5,
-   scale:1,
-	x: '-100vw',ease:"none",
-  scrollTrigger:{
-    trigger:"#ABOUT",scrub:true,start:"top top ",end:'bottom ',pin:true,
-  },
- 
-});
+
 
 
 const tl6 = gsap.timeline({scrollTrigger:{trigger:"#ABOUT",start:"top 80%",}});
