@@ -643,7 +643,6 @@ a {
 }
 #svgAbout{
   width: 40vw;
-  margin: 20px;
 }
 #definition, .definition1, .definition2,#about{
   position:static;
