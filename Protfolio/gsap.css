@@ -124,9 +124,10 @@ width: 100vw;
 }
 .panel {
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh)*100);
   display: flex;
-   scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
 }
 
 .howIsMe {
