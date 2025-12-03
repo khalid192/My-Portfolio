@@ -601,7 +601,7 @@ a {
   }
   #text1 {
     font-size: 6vw;
-    top: 60vh;
+    top: calc(var(--vh) * 55);
     left: 3vw;
     width: 80vw;
   }
