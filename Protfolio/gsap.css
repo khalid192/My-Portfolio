@@ -610,7 +610,7 @@ a {
     width: 90%;
   }
  #scrollDown {
-    top: 65vh;
+    top: calc(var(--vh) * 65);
   }
   #svgscroll {
     width: 20vw;
