@@ -792,6 +792,13 @@ list-style: none;}
 .card-back p{font-size: small; line-height: 13px;}
 
 .card-back a img{width: 20px;}
+#textContact{
+  position: relative;
+  width: 80vw;
+  font-size: 4vw;
+  right: 5vw;
+  bottom: 0;
+}
 }
 
 
