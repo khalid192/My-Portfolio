@@ -589,6 +589,9 @@ a {
 .photos1{
   display: none;
 }
+.cards-phone{
+  display: none;
+}
 @media (max-width: 768px) {
 
   body, html {
@@ -755,10 +758,9 @@ a {
   width: 95vw;
   font-size: 4vw;
 padding: 7px;
-line-height: 150%;}
+line-height: 150%;
+list-style: none;}
 
-
-}
 #list3{
   margin-bottom: 10vh;
   display: flex;
@@ -768,6 +770,28 @@ line-height: 150%;}
 #list31{
   width: 90vw;
 
+}
+
+.card {
+  width: 40vw;
+  height: 20vh;
+  margin-bottom: 20px;
+}
+.cards{
+  width: 90vw;
+  justify-content: space-around;
+  margin-bottom: 3vh;
+  height: auto;
+  
+}
+.cards-phone{display: flex;width: 90vw;justify-content: space-around;}
+#card3Phone,#card4Phone{display: block;}
+.card3,.card4{display: none;}
+.card-front h2{font-size: large;}
+
+.card-back p{font-size: small; line-height: 13px;}
+
+.card-back a img{width: 20px;}
 }
 
 
