@@ -792,16 +792,45 @@ list-style: none;}
 .card-back p{font-size: small; line-height: 13px;}
 
 .card-back a img{width: 20px;}
+
+
 #textContact{
-  position: relative;
-  width: 80vw;
-  font-size: 4vw;
-  right: 5vw;
-  bottom: 0;
+  position:static;
+  width: 85vw;
+  line-height: 1;
+  word-spacing: 5px;
+  font-size: 2vh;
+  transform: translateY(-50%);
 }
+#backGround1{
+  display: none;
 }
+#textContactDiv{
+
+display: flex;
+justify-content: center;
+width: 100vw;
+margin-bottom:10vh;
+
+}
+#CONTACT{
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+    gap: 5vh;
+}
+.contact-box{
+  position: static;
+  transform: translateY(0);
+  left: 0;
+  margin-top: 5vh;
+  align-items: center;
 
 
+}
+}
 
 ::-webkit-scrollbar {
   display: none;
