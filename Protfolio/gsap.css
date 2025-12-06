@@ -819,7 +819,7 @@ margin-bottom:10vh;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-    gap: 5vh;
+    gap: 10vh;
 }
 .contact-box{
   position: static;
