@@ -830,6 +830,10 @@ margin-bottom:10vh;
 
 
 }
+
+#scrollBtn, #scrollBtn1{
+display: none;
+  }
 }
 
 ::-webkit-scrollbar {

@@ -23,12 +23,94 @@ document.addEventListener("DOMContentLoaded", () => {
 	x: '-100vw',ease:"none",
   scrollTrigger:{
     trigger:"#ABOUT",scrub:true,start:"top top ",end:'bottom ',pin:true,
-  },
- 
+  },});
+
+  
+document.getElementById("scrollBtn").addEventListener("click", () => {
+  const targetPos = smoother.scrollTop() - window.innerHeight;
+  gsap.to("#scrollBtn", {duration:1, ease:"power2.inOut",opacity:0,y:-50,yoyo:true,repeat:1});
+  gsap.to("#contNav", {duration:1.7, top:"-100px",});
+gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
+  smoother.scrollTo(targetPos, true); // true = smooth
 });
 
+
+document.getElementById("scrollBtn1").addEventListener("click", () => {
+  const targetPos = smoother.scrollTop() + window.innerHeight;
+  gsap.to("#scrollBtn1", {duration:1, ease:"power2.inOut",opacity:0,y:50,yoyo:true,repeat:1});
+gsap.to("#contNav", {duration:1.7, top:"-100px",});
+  smoother.scrollTo(targetPos, true); // true = smooth
+  gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
+});
+
+
+ScrollTrigger.create({
+  trigger: "#HOME",
+  start: "top center ",
+  end: "bottom center",
+
+  onEnter: () => {
+    
+   document.getElementById("scrollBtn").style.display = "none";
+  },
+  onEnterBack: () => {
+    document.getElementById("scrollBtn").style.display = "none";
+  },
+  onLeave: () => {
+    document.getElementById("scrollBtn").style.display = "block";
+  },
+});
+
+ScrollTrigger.create({
+  trigger: "#CONTACT",
+  start: "top center",
+  end: "bottom center",
+  onEnter: () => {
+    
+   document.getElementById("scrollBtn1").style.display = "none";
+  },
+  onLeaveBack: () => {
+    document.getElementById("scrollBtn1").style.display = "block";
+  },
+
+});
+
+const tl7 = gsap.timeline({scrollTrigger:{
+  trigger:"#ABOUT",
+  start:"top top",
+  end:"bottom center",
+  markers:true,
+  
+  onLeave:()=>{
+     gsap.set("#textH31,#textH32,#textH33", {display:"block"})
+    const tl = gsap.timeline({delay:0.5,});
+    tl.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50});
+    tl.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50},"-=50%");
+    tl.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50},"-=50%");
+
+   }
+,}});
 }
   
+ if(window.matchMedia("(max-width: 767px)").matches){
+  const tl7 = gsap.timeline({delay:0.5,scrollTrigger:{
+  trigger:".panel1",
+  start:"top center",
+  end:"bottom center",
+  markers:true,
+  
+  onEnter:()=>{
+     gsap.set("#textH31,#textH32,#textH33", {display:"block"}) }
+,}});
+
+    tl7.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50});
+    tl7.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50},"-=50%");
+    tl7.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50},"-=50%");
+}
+
+
+
+
 
 const smoother = ScrollSmoother.get();
 
@@ -88,22 +170,7 @@ document.querySelector('ul[scroll-contact]').addEventListener("click", () => {
 
 
 
-document.getElementById("scrollBtn").addEventListener("click", () => {
-  const targetPos = smoother.scrollTop() - window.innerHeight;
-  gsap.to("#scrollBtn", {duration:1, ease:"power2.inOut",opacity:0,y:-50,yoyo:true,repeat:1});
-  gsap.to("#contNav", {duration:1.7, top:"-100px",});
-gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
-  smoother.scrollTo(targetPos, true); // true = smooth
-});
 
-
-document.getElementById("scrollBtn1").addEventListener("click", () => {
-  const targetPos = smoother.scrollTop() + window.innerHeight;
-  gsap.to("#scrollBtn1", {duration:1, ease:"power2.inOut",opacity:0,y:50,yoyo:true,repeat:1});
-gsap.to("#contNav", {duration:1.7, top:"-100px",});
-  smoother.scrollTo(targetPos, true); // true = smooth
-  gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
-});
 
 
 document.getElementById("iconeMenu").addEventListener("click", () => {
@@ -186,20 +253,7 @@ tl6.from('.definition2', {duration: 1, opacity:0,x:100,ease:"back.out(1.7)"},"-=
 
 gsap.set('#textH31,#textH32,#textH33', {display:"none"});
  
-const tl7 = gsap.timeline({scrollTrigger:{
-  trigger:"#ABOUT",
-  start:"top top",
-  end:"bottom center",
-  
-  onLeave:()=>{
-     gsap.set("#textH31,#textH32,#textH33", {display:"block"})
-    const tl = gsap.timeline({delay:0.5,});
-    tl.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50});
-    tl.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50},"-=50%");
-    tl.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50},"-=50%");
 
-   }
-,}});
 
 gsap.to("#progress", {
   width: "100vw",
@@ -232,35 +286,8 @@ tl5.from('.card4', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 tl5.from('.card5', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 tl5.from('.card6', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 
-ScrollTrigger.create({
-  trigger: "#CONTACT",
-  start: "top center",
-  end: "bottom center",
-  onEnter: () => {
-    
-   document.getElementById("scrollBtn1").style.display = "none";
-  },
-  onLeaveBack: () => {
-    document.getElementById("scrollBtn1").style.display = "block";
-  },
 
-});
-ScrollTrigger.create({
-  trigger: "#HOME",
-  start: "top center ",
-  end: "bottom center",
 
-  onEnter: () => {
-    
-   document.getElementById("scrollBtn").style.display = "none";
-  },
-  onEnterBack: () => {
-    document.getElementById("scrollBtn").style.display = "none";
-  },
-  onLeave: () => {
-    document.getElementById("scrollBtn").style.display = "block";
-  },
-});
 
 
 const tl8 = gsap.timeline({scrollTrigger:{trigger:"#CONTACT",start:"top 80%",}});
