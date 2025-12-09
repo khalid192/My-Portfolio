@@ -48,12 +48,14 @@ tl.from("#scrollBtn1,#scrollBtn", {duration: 1,opacity:0,x:100});
 
 
 
+
 gsap.set('#scrollIcone', {scale:0.9,transformOrigin: "50% 50%"});
 tl.from("#scrollDown", {duration: 1, opacity:0,y:100
 ,onComplete:()=>{
   gsap.set('#scrollIcone', {scale:0.9});
 gsap.to('#scrollIcone', {duration: 5, rotation:360,repeat:-1,transformOrigin: "50% 50%",ease:'none',});
 gsap.to('#scrollIcone', {duration: 4,yoyo:true,repeat:-1,scale:0.99,ease:"none"});
+
 const tl = gsap.timeline({repeat:-1,});
 
 
@@ -63,14 +65,10 @@ tl.to("#arrow3", {duration: 1, y:7},0.25);
 tl.to("#arrow1", {duration: 0.5, y:0});
 tl.to("#arrow3", {duration: 0.5, y:0});
 tl.to("#arrow2", {duration: 0.5, y:0});
-
-
-
-
-
-
 }
+
 });
+tl.from("#ABOUT,#SKILLS,#PROJECT,#CONTACT", {opacity:0});
 
   ScrollSmoother.create({
     wrapper: ".ScrollSmoother-warapper",
@@ -143,7 +141,7 @@ const tl7 = gsap.timeline({scrollTrigger:{
   trigger:"#ABOUT",
   start:"top top",
   end:"bottom center",
-  markers:true,
+
   
   onLeave:()=>{
      gsap.set("#textH31,#textH32,#textH33", {display:"block"})
@@ -154,8 +152,17 @@ const tl7 = gsap.timeline({scrollTrigger:{
 
    }
 ,}});
+// Skills section animation
+const tl4 = gsap.timeline({scrollTrigger:{trigger:"#SKILLS",start:"top 80%",}});
+tl4.from('#list11', {duration: 1, opacity:0,y:50,delay:0.5,ease:"back.out(1.7)"});
+tl4.from('#list12', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
+tl4.from('#list21', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
+tl4.from('#list22', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
+tl4.from('#list31', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 }
-  // Mobile animations
+
+
+// Mobile animations
  if(window.matchMedia("(max-width: 767px)").matches){
 // Animations timeline FOR HOME SECTION
 
@@ -221,13 +228,14 @@ tl.to("#arrow2", {duration: 0.5, y:0});
 
 }
 });
+tl.from("#ABOUT,#SKILLS,#PROJECT,#CONTACT", {opacity:0});
 
 
   const tl7 = gsap.timeline({delay:0.5,scrollTrigger:{
   trigger:".panel1",
   start:"top center",
   end:"bottom center",
-  markers:true,
+
   
   onEnter:()=>{
      gsap.set("#textH31,#textH32,#textH33", {display:"block"}) }
@@ -236,6 +244,14 @@ tl.to("#arrow2", {duration: 0.5, y:0});
     tl7.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50});
     tl7.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50},"-=50%");
     tl7.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50},"-=50%");
+
+// Skills section animation
+    const tl4 = gsap.timeline({scrollTrigger:{trigger:"#SKILLS",start:"top 50%",}});
+tl4.from('#list11', {duration: 2, opacity:0,y:50,delay:0.5,ease:"back.out(1.7)"});
+tl4.from('#list12', {duration: 1.2, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
+tl4.from('#list21', {duration: 1.2, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
+tl4.from('#list22', {duration: 1.2, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
+tl4.from('#list31', {duration: 1.2, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 }
 
 
@@ -317,7 +333,7 @@ document.getElementById("iconeMenu").addEventListener("click", () => {
 
 
 
-const tl6 = gsap.timeline({scrollTrigger:{trigger:"#ABOUT",start:"top 50%",markers:true,}});
+const tl6 = gsap.timeline({scrollTrigger:{trigger:"#ABOUT",start:"top 50%",}});
 tl6.from('.definition1', {duration: 1, opacity:0,x:-100,delay:0.5,ease:"back.out(1.7)"});
 tl6.from('.definition2', {duration: 1, opacity:0,x:100,ease:"back.out(1.7)"},"-=50%");
 
@@ -339,12 +355,7 @@ gsap.to("#progress", {
 
 
 
-const tl4 = gsap.timeline({scrollTrigger:{trigger:"#SKILLS",start:"top 80%",}});
-tl4.from('#list11', {duration: 1, opacity:0,y:50,delay:0.5,ease:"back.out(1.7)"});
-tl4.from('#list12', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
-tl4.from('#list21', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
-tl4.from('#list22', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
-tl4.from('#list31', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
+
 
 
 const tl5 = gsap.timeline({scrollTrigger:{trigger:"#PROJECT",start:"top 80%",}});
@@ -361,8 +372,8 @@ tl5.from('.card6', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 
 
 const tl8 = gsap.timeline({scrollTrigger:{trigger:"#CONTACT",start:"top 80%",}});
-tl8.from('#backGround1', {duration: 3, opacity:0,delay:0.5,ease:"none"});
-tl8.from('.contact-box a', {duration: 0.3,stagger: 0.4, opacity:0,x:-50,ease:"none"},"-=20%");
+
+tl8.from('.contact-box a', {duration: 0.3,stagger: 0.4, opacity:0,x:-50,ease:"none" ,delay:1},"-=20%");
 tl8.from('#textContact', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 
 
