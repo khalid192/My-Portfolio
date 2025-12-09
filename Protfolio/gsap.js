@@ -68,7 +68,7 @@ tl.to("#arrow2", {duration: 0.5, y:0});
 }
 
 });
-tl.from("#ABOUT,#SKILLS,#PROJECT,#CONTACT", {opacity:0});
+tl.from("html,body", {overflow:"hidden"});
 
   ScrollSmoother.create({
     wrapper: ".ScrollSmoother-warapper",
@@ -228,7 +228,7 @@ tl.to("#arrow2", {duration: 0.5, y:0});
 
 }
 });
-tl.from("#ABOUT,#SKILLS,#PROJECT,#CONTACT", {opacity:0});
+tl.from("html,body", {overflow:"hidden"});
 
 
   const tl7 = gsap.timeline({delay:0.5,scrollTrigger:{
