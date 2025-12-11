@@ -95,7 +95,7 @@ width: 100vw;
   width: 100vw;
   position: absolute;
   box-shadow: inset 0 0 50px 100px rgba(0,0,0,0.8);
-  background-image: url(background-img/faded_gallery-6MhAk6pKCEM-unsplash.jpg);
+  background-image: url(background-img/faded.jpg);
 background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -203,7 +203,7 @@ h4 {
 .panel1 {
   height: 100vh;
   width: 100vw;
-  background-image: url(background-img/light\ bihaind.jpg);
+  background-image: url(background-img/bihaind.jpg);
   background-size: cover;
   display: none;
   background-repeat: no-repeat;
