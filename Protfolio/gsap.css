@@ -681,7 +681,7 @@ html, body {
   position: relative;
   top: 5px;
   left: 0;
-  
+  padding: 0px;
 }
 .photos1{
   display: block;
