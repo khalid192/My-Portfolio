@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     Physics2DPlugin,
     PhysicsPropsPlugin,DrawSVGPlugin,SplitText
   );
+
+  gsap.set("#tl", {rotation:180,transformOrigin: "50% 50%"});
   if(window.matchMedia("(min-width: 768px)").matches){
     // ScrollSmoother for smooth scrolling effect on desktop only
 
@@ -23,7 +25,7 @@ tl.to("#KRZ", {duration:2.5,scale:2,fill:" #f5f2f2ea"},"<");
 
 tl.from("#tl", {duration: 1, opacity:0,scale:1.5},"<");
 tl.from("body", {duration: 1,backgroundColor:"#ebebebff"},"<");
-tl.to("#HOME", {duration:1,backgroundColor: "#010108"});
+tl.to("#HOME", {duration:1,backgroundColor: "#000000ff"});
 
 tl.to("#KRZ", {duration:1,scale:3,x:-300,y:10,onComplete:()=>{const tl1 = gsap.timeline();
         tl1.to('#KRZ', {duration: 2,y:9,yoyo:true,repeat:-1});}});
@@ -93,7 +95,7 @@ document.getElementById("scrollBtn").addEventListener("click", () => {
   gsap.to("#scrollBtn", {duration:1, ease:"power2.inOut",opacity:0,y:-50,yoyo:true,repeat:1});
   gsap.to("#contNav", {duration:1.7, top:"-100px",});
 gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
-  smoother.scrollTo(targetPos, true); // true = smooth
+ gsap.to(window, {duration: 1, scrollTo: targetPos});
 });
 
 // Scroll down button functionality
@@ -101,7 +103,7 @@ document.getElementById("scrollBtn1").addEventListener("click", () => {
   const targetPos = smoother.scrollTop() + window.innerHeight;
   gsap.to("#scrollBtn1", {duration:1, ease:"power2.inOut",opacity:0,y:50,yoyo:true,repeat:1});
 gsap.to("#contNav", {duration:1.7, top:"-100px",});
-  smoother.scrollTo(targetPos, true); // true = smooth
+  gsap.to(window, {duration: 1, scrollTo: targetPos});
   gsap.to("#iconeMenu", {duration:0.5,ease:"power2.inOut",top:"-5px"});
 });
 
@@ -144,11 +146,12 @@ const tl7 = gsap.timeline({scrollTrigger:{
 
   
   onLeave:()=>{
-     gsap.set("#textH31,#textH32,#textH33", {display:"block"})
-    const tl = gsap.timeline({delay:0.5,});
-    tl.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50});
-    tl.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50},"-=50%");
-    tl.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50},"-=50%");
+     gsap.set("#textH31,#textH32,#textH33,.panel1", {display:"block",opacity:1})
+    const tl = gsap.timeline({});
+    tl.from(".panel1", {duration: 3, opacity:0,});
+    tl.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50},"-=200%");
+    tl.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50},"-=150%");
+    tl.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50},"-=100%");
 
    }
 ,}});
@@ -180,7 +183,7 @@ tl.to("#KRZ", {duration:2.5,scale:2,fill:" #f5f2f2ea"},);
 
 tl.from("#tl", {duration: 1, opacity:0,scale:1.5},"<");
 tl.from("body", {duration: 1,backgroundColor:"#ebebebff"},"<");
-tl.to("#HOME", {duration:1,backgroundColor: "#010108"});
+tl.to("#HOME", {duration:1,backgroundColor: "#000000ff"});
 
 tl.to("#KRZ", {duration:1,scale:3.8,x:-265,y:10,onComplete:()=>{const tl1 = gsap.timeline();
         tl1.to('#KRZ', {duration: 2,y:9,yoyo:true,repeat:-1});}});
@@ -334,7 +337,9 @@ document.getElementById("iconeMenu").addEventListener("click", () => {
 
 
 const tl6 = gsap.timeline({scrollTrigger:{trigger:"#ABOUT",start:"top 50%",}});
-tl6.from('.definition1', {duration: 1, opacity:0,x:-100,delay:0.5,ease:"back.out(1.7)"});
+tl6.from('#about', {duration: 1, opacity:0,x:-100,delay:0.5,ease:"back.out(1.7)"});
+tl6.from('.photos1,.myPhtos', {duration: 1, opacity:0,x:100,ease:"back.out(1.7)"},"-=50%");
+tl6.from('.definition1', {duration: 1, opacity:0,x:-100,delay:0.5,ease:"back.out(1.7)"},"-=80%");
 tl6.from('.definition2', {duration: 1, opacity:0,x:100,ease:"back.out(1.7)"},"-=50%");
 
 gsap.set('#textH31,#textH32,#textH33', {display:"none"});
