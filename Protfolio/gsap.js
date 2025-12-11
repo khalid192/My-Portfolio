@@ -243,7 +243,7 @@ tl.from("html,body", {overflow:"hidden"});
   onEnter:()=>{
      gsap.set("#textH31,#textH32,#textH33", {display:"block"}) }
 ,}});
-
+gsap.from(".panel1", {duration: 3, opacity:0,});
     tl7.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50});
     tl7.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50},"-=50%");
     tl7.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50},"-=50%");
