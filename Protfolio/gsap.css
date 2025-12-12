@@ -853,7 +853,8 @@ margin-bottom:10vh;
 #scrollBtn, #scrollBtn1{
 display: none;
   }
-  .KRZ{height: calc(var(--vh) * 100);}
+  .KRZ{height: calc(var(--vh) * 100);
+  align-self: self-start;}
 }
 
 ::-webkit-scrollbar {
