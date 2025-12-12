@@ -139,6 +139,7 @@ ScrollTrigger.create({
 
 });
 //Desktop animations
+gsap.set('.panel1', {opacity:0});
 const tl7 = gsap.timeline({scrollTrigger:{
   trigger:"#ABOUT",
   start:"top top",
@@ -146,12 +147,12 @@ const tl7 = gsap.timeline({scrollTrigger:{
 
   
   onLeave:()=>{
-     gsap.set("#textH31,#textH32,#textH33,.panel1", {display:"block",opacity:1})
+     gsap.set("#textH31,#textH32,#textH33", {display:"block",opacity:1})
     const tl = gsap.timeline({});
-    tl.from(".panel1", {duration: 3, opacity:0,});
-    tl.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50},"-=200%");
-    tl.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50},"-=150%");
-    tl.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50},"-=100%");
+   gsap.to(".panel1", {duration: 5, opacity:0.7,});
+    tl.from("#textH31", {duration: 1,ease:"back.out(1.7)", opacity:0,y:-50});
+    tl.from("#textH32", {duration: 1,ease:"back.out(1.7)", opacity:0,x:-50});
+    tl.from("#textH33", {duration: 1,ease:"back.out(1.7)", opacity:0,x:50});
 
    }
 ,}});
@@ -377,9 +378,9 @@ tl5.from('.card6', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 
 
 const tl8 = gsap.timeline({scrollTrigger:{trigger:"#CONTACT",start:"top 80%",}});
-
-tl8.from('.contact-box a', {duration: 0.3,stagger: 0.4, opacity:0,x:-50,ease:"none" ,delay:1},"-=20%");
-tl8.from('#textContact', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
+tl8.from('#backGround1', {duration: 3, opacity:0,delay:0.5,ease:"none"});
+tl8.from('.contact-box a', {duration: 0.3,stagger: 0.4, opacity:0,x:-50,ease:"none" ,delay:1},"<");
+tl8.from('#textContact', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"});
 
 
 

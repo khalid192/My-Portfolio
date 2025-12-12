@@ -205,7 +205,6 @@ h4 {
   width: 100vw;
   background-image: url(background-img/bihaind.jpg);
   background-size: cover;
-  display: none;
   background-repeat: no-repeat;
   background-position: center;
  
@@ -854,6 +853,7 @@ margin-bottom:10vh;
 #scrollBtn, #scrollBtn1{
 display: none;
   }
+  .KRZ{height: calc(var(--vh) * 100);}
 }
 
 ::-webkit-scrollbar {
