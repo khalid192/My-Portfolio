@@ -767,11 +767,9 @@ html, body {
 #list1,
 #list2,
 #list3 {
-  height: auto;
+  height: fit-content;
   width: 100vw;
   display: block;
- 
-
 }
 .pag2 ul{
   width: 95vw;
@@ -781,7 +779,7 @@ line-height: 150%;
 list-style: none;}
 
 #list3{
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -853,10 +851,17 @@ margin-bottom:10vh;
 #scrollBtn, #scrollBtn1{
 display: none;
   }
-  .KRZ{height: calc(var(--vh) * 100);
-  align-self: self-start;}
+
+  .panel1 {
+  height: 100vh;
+  width: 100vw;
+  background-image:none;
+
+ 
+}
 }
 
 ::-webkit-scrollbar {
   display: none;
-} 
+}   .KRZ{height: calc(var(--vh) * 100);
+  align-self: self-start;}

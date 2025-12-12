@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Animations timeline FOR HOME SECTION
  let split = SplitText.create("#text1", { type: "words, chars" });
 const tl = gsap.timeline()
- tl.from("#KRZ", {duration:3,delay:1,y:50,scale:2,transformOrigin: "center center",});
+ tl.from("#KRZ", {duration:3,delay:1,opacity:0,y:50,scale:2,transformOrigin: "center center",});
  
  tl.from("#copieRight", {duration:2,opacity:0,y:20,ease:"elastic"});
  tl.from("#myProtfolio", {duration:1,opacity:0,});
@@ -378,9 +378,9 @@ tl5.from('.card6', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"-=50%");
 
 
 const tl8 = gsap.timeline({scrollTrigger:{trigger:"#CONTACT",start:"top 80%",}});
-tl8.from('#backGround1', {duration: 3, opacity:0,delay:0.5,ease:"none"});
-tl8.from('.contact-box a', {duration: 0.3,stagger: 0.4, opacity:0,x:-50,ease:"none" ,delay:1},"<");
-tl8.from('#textContact', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"});
+tl8.from('.contact-box a', {duration: 0.3,stagger: 0.4, opacity:0,x:-50,ease:"none" ,delay:1},);
+tl8.from('#backGround1', {duration: 6, opacity:0,ease:"none"});
+ tl8.from('#textContact', {duration: 1, opacity:0,y:50,ease:"back.out(1.7)"},"<");
 
 
 
